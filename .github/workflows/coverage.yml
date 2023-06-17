@@ -29,3 +29,6 @@ jobs:
         with:
           pytest-coverage-path: ./pytest-coverage.txt
           junitxml-path: ./pytest.xml
+          
+      - name: Check the output coverage
+        run: echo "Coverage Report - ${{ steps.coverage-comment.outputs.coverage }}"
