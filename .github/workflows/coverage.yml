@@ -22,7 +22,7 @@ jobs:
 
       - name: Build coverage file
         run: |
-          python -m pytest --cov=calculator --cov-report=term --cov-report-file=pytest-coverage.txt
+          python -m pytest --cov=calculator --cov-report=term --junitxml=pytest.xml > pytest-coverage.txt
 
       - name: Pytest coverage comment
         uses: MishaKav/pytest-coverage-comment@main
